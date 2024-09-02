@@ -12,7 +12,7 @@ namespace AppStructure.Controllers
 
             return Content($"Movie with id = {id}");
         }
-
+         
         [ActionName( "index" )]
         [HttpPost]
         [AcceptVerbs("Post", "Get")]
