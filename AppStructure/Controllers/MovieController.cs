@@ -12,6 +12,13 @@ namespace AppStructure.Controllers
 
             return Content($"Movie with id = {id}");
         }
-         
+
+        [ActionName("index")]
+        [HttpPost]
+        [AcceptVerbs("Post", "Get")]
+        public IActionResult Index()
+        {
+            return RedirectToAction(nameof(GetMovie), new { id = 10 });
+        }
     }
 }
